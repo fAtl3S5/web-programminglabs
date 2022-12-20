@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Коваль Глеб. ФБИ-02. Лабораторная работа 7</title>
+        <link rel="stylesheet" href="lab7.css" type="text/css">
+        <script src="lab7.js"></script>
+        </head>
+    <body onload="makeStairs()">
+        <div class="header">
+            Коваль Глеб
+        </div>
+
+        <div class="content">
+            <from>
+                <div id="user-data">
+                    <div>
+                        <span id="your-name">Ваше имя</span>:
+                        <input type="text" id="input-name" placeholder="введите имя">
+                    </div>
+                    <div>
+                        <span id="your-surname">Ваша фамилия</span>:
+                        <input type="text" id="input-surname" placeholder="введите фамилию">
+                    </div>
+                    <div>
+                        <span id="your-age">Ваш возраст</span>:
+                        <input type="number" id="input-age" placeholder="введите возраст">
+                    </div>
+                    <div>
+                        <span>Ваш пол</span>:
+                        <select id="sex">
+                            <option value="male">мужской</option>
+                            <option value="female">женский</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="button" value="ок" id="ok-button" onclick="showAlert()">
+                        <input type="reset" value="сброc" id="reset-button">
+                    </div>
+            
+<div style="position: fixed; bottom: 100px; right: 1000px;">
+<p>
+Октябрь уж наступил — уж роща отряхает<br>
+Последние листы с нагих своих ветвей;<br>
+Дохнул осенний хлад — дорога промерзает.<br>
+Журча еще бежит за мельницу ручей,<br>
+Но пруд уже застыл; сосед мой поспешает<br>
+В отъезжие поля с охотою своей,<br>
+И страждут озими от бешеной забавы,<br>
+И будит лай собак уснувшие дубравы.<br>
+</p>
+<p>
+Теперь моя пора: я не люблю весны;<br>
+Скучна мне оттепель; вонь, грязь — весной я болен;<br>
+Кровь бродит; чувства, ум тоскою стеснены.<br>
+Суровою зимой я более доволен,<br>
+Люблю ее снега; в присутствии луны<br>
+Как легкий бег саней с подругой быстр и волен,<br>
+Когда под соболем, согрета и свежа,<br>
+Она вам руку жмет, пылая и дрожа!<br>
+</p>
+<p>
+Как весело, обув железом острым ноги,<br>
+Скользить по зеркалу стоячих, ровных рек!<br>
+А зимних праздников блестящие тревоги?..<br>
+Но надо знать и честь; полгода снег да снег,<br>
+Ведь это наконец и жителю берлоги,<br>
+Медведю, надоест. Нельзя же целый век<br>
+Кататься нам в санях с Армидами младыми<br>
+Иль киснуть у печей за стеклами двойными.<br>
+</p>                  
+                    </div>
+                    <div style="position: fixed; bottom: 100px; right: 700px;">
+                        <TABLE border="1">
+                            <tr>
+                                <td>Умножение</a></td><td>Результат</td>
+                            </tr>
+                            <tr>
+                                <td>1*14</td><td>14</td>
+                            </tr>
+                            <tr>
+                                <td>2*14</td><td>28</td>
+                            </tr>
+                            <tr>
+                                <td>3*14</td><td>42</td>
+                            </tr>
+                            <tr>
+                                <td>4*14</td><td>56</td>
+                            </tr>
+                            <tr>
+                                <td>5*14</td><td>70</td>
+                            </tr>
+                            <tr>
+                                <td>6*14</td><td>84</td>
+                            </tr>
+                            <tr>
+                                <td>7*14</td><td>98</td>
+                            </tr>
+                            <tr>
+                                <td>8*14</td><td>112</td>
+                            </tr>
+                            <tr>
+                                <td>9*14</td><td>126</td>
+                            </tr>
+                        </TABLE>
+                        </div>
+                    </div>
+                </div>
+            </from>
+
+            <div id="stairs"></div>
+        </div>
+         
+            <div class="footer">
+            Факультет бизнеса, ФБИ-02, 3 курс, 2022
+        </div>
+            </body>
+<script type="text/javascript">
+    var imgsrc = "snow.gif";
+    var height = document.body.scrollHeight;
+    if (height<document.body.clientHeight) height = document.body.clientHeight;
+    var width = document.body.scrollWidth;
+    var col = Math.round(height/40);    //количество снежинок
+    
+    var amp = new Array();
+    var x_pos = new Array();
+    var y_pos = new Array();
+    var stx = new Array();
+    var sty = new Array();
+    var deltax = new Array();
+    var obj = new Array();
+    
+    for (i=0; i<col; ++i) {
+     amp[i] = Math.random()*19;
+     x_pos[i] = Math.random()*(width-amp[i]-29);
+     y_pos[i] = Math.random()*height;
+     stx[i] = 0.03 + Math.random()*0.25;
+     sty[i] = 2 + Math.random();
+     deltax[i] = 0;
+    
+     document.write("<img id=\"sn"+ i +"\" style=\"position: absolute; " +
+     "z-index: 50; top: -50px; left: -50px;\" src='" + imgsrc + "'>");
+    
+     obj[i] = document.getElementById("sn" + i);
+    }
+    
+    function flake() {
+     for (i=0; i<col; ++i) {
+        y_pos[i] += sty[i];
+        if (y_pos[i]>height-49) {
+            x_pos[i] = Math.random()*(width-amp[i]-29);
+            y_pos[i] = 0;
+        }
+        deltax[i] += stx[i];
+        obj[i].style.top = y_pos[i] + "px";
+        obj[i].style.left = x_pos[i] + amp[i]*Math.sin(deltax[i]) + "px";
+     }
+    setTimeout("flake()", 60);
+    }
+    flake();
+    </script>
+</html>

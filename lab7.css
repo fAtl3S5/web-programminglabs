@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b99dff;
+}
+.header {
+    color: white;
+    background: rgb(172, 79, 79);
+    font-size: 40px;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 40px;
+}
+.footer {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    background-color: rgb(44, 199, 127);
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.header .language {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+}
+.step {
+    width: 200px;
+    height: 100px;
+    border: 1px solid;
+    position: absolute;
+    top: 300px;
+    left: 30px;
+    text-align: center;
+}
