@@ -1,30 +1,30 @@
 function setRussian() {
     let name = document.getElementById('student');
-    name.innerHTML = 'Виктор Брюзгин';
+    name.innerHTML = 'Коваль Глеб';
 
     let footer = document.getElementById('footer');
     footer.innerHTML = 'Факультет бизнеса, ФБИ-02, 3 курс, 2022';
 
-    document.getElementById('your-name').innerHTML = 'Ваше имя';
-    document.getElementById('input-name').placeholder = 'введите имя';
+    document.getElementById('your-name').innerHTML = 'Введите имя';
+    document.getElementById('input-name').placeholder = 'Введите имя';
 }
 
 function setEnglish() {
     let name = document.getElementById('student');
-    name.innerHTML = 'Viktor Bryuzgin';
+    name.innerHTML = 'Koval Gleb';
 
     let footer = document.getElementById('footer');
-    footer.innerHTML = 'Faculty of Business, FBI-02, 3rd year, 2022';
+    footer.innerHTML = 'Facultate of Busiess, 3 course, FBI-02';
 
     document.getElementById('your-name').innerHTML = 'Your name';
-    document.getElementById('input-name').placeholder = 'enter your name';
+    document.getElementById('input-name').placeholder = 'Enter your name';
 }
 
 function showAlert() {
     let userName = document.getElementById('input-name').value;
     let userSurname = document.getElementById('input-surname').value;
     let userAge = document.getElementById('input-age').value;
-    alert('Привет, ' + userName + ' ' + userSurname + '\n' + 'Ваш возраст: ' + userAge);
+    alert('Hello, ' + userName + ' ' + userSurname + '\n' + 'Your age: ' + userAge);
     let r = Math.round(Math.random()*255);
     let g = Math.round(Math.random()*255);
     let b= Math.round(Math.random()*255);
@@ -33,11 +33,11 @@ function showAlert() {
 }
 
 function showAlert2() {
-    alert('Это я делал');
-    document.getElementById('student').style.backgroundColor = 'red';
+    alert('Посмотри на это!');
+    document.getElementById('student').style.backgroundColor = 'green';
 }
 
 function showAlert3() {
-    alert('Это я делал');
-    document.getElementById('footer').style.backgroundColor = 'red';
+    alert('Look at this!');
+    document.getElementById('footer').style.backgroundColor = 'green';
 }
