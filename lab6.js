@@ -11,7 +11,7 @@ function setRussian() {
 
 function setEnglish() {
     let name = document.getElementById('student');
-    name.innerHTML = 'Koval Gleb';
+    name.innerHTML = 'Repin Roman';
 
     let footer = document.getElementById('footer');
     footer.innerHTML = 'Facultate of Busiess, 3 course, FBI-02';
