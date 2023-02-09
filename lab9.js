@@ -7,10 +7,10 @@ function clickMe(button) {
 
 
 function clickMe2(button) {
-    if(button.innerHTML == 'Коваль')
-        button.innerHTML = 'Глеб';
+    if(button.innerHTML == 'Репин')
+        button.innerHTML = 'Роман';
     else
-        button.innerHTML = 'Коваль';
+        button.innerHTML = 'Репин';
 }
 
 function clickMe3(button)
