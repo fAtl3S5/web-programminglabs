@@ -1,9 +1,9 @@
 function setRussian() {
     let name = document.getElementById('student');
-    name.innerHTML = 'Коваль Глеб';
+    name.innerHTML = 'Репин Роман';
 
     let footer = document.getElementById('footer');
-    footer.innerHTML = 'Факультет бизнеса, ФБИ-02, 3 курс, 2022';
+    footer.innerHTML = 'Факультет Бизнеса, ФБИ-02, 3 курс, 2022';
 
     document.getElementById('your-name').innerHTML = 'Введите имя';
     document.getElementById('input-name').placeholder = 'Введите имя';
